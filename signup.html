@@ -1,0 +1,272 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>sign up</title>
+	
+<link rel="stylesheet" href="style.css">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+  <style>
+	#ui{
+    background: lavender;
+    padding:30px;
+    margin-top:50px;
+    border-radius:10px;
+    opacity:0.8;
+  }
+  #ui  h1{
+    color: black;
+  }
+  .t-color{
+    color:grey ;
+  }
+</style>
+<style type="text/css">
+    label.error {
+    color: red;
+    font-size: 1rem;
+    display: block;
+    margin-top: 5px;
+}
+
+input.error, textarea.error {
+    border: 1px dashed red;
+    font-weight: 300;
+    color: red;
+}
+</style>
+	
+	</head>
+	<body>
+		<div class="container">
+	<section>
+		<header>
+			<div class="circle"></div>
+			<a href="a"class="logo">Shop<span>ifty</span></a>
+			<ul>
+				<li><a href="home.html" >Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="drees.html">Dress</a></li>
+				<li><a href="cosmatic.html">Cosmetic</a></li>
+				<li><a href="perfume.html">Perfume</a></li>
+            </ul>
+			<p><a href="signup.html" >Sign-Up</a></p>		
+
+		</header>
+		<div class="container">
+    <div class="row">
+      <div class="col-lg-3"></div>
+       <div class="col-lg-6">
+        <div id="ui">
+          <h1 class="text-center">Place Your Order Here</h1>
+         <form class="form-group" id="jQuery_form">
+           <div class="row">
+             <div class="col-lg-6">
+                <label for="fname" class="t-colour">First Name</label>
+                <input id="fname" name="fname" class="form-control" placeholder="Enter First Name"><br>
+             </div>
+             <div class="col-lg-6">
+                <label for="lname" class="t-colour">Last Name</label>
+                <input id="lname" name="lname" class="form-control" placeholder="Enter Last Name"><br>
+             </div>
+           </div>
+           <div class="row">
+             <div class="col-lg-6">
+                <label for="mobile" class="t-colour">Mobile No.</label>
+                <input id="mobile" name="mobile" class="form-control" placeholder="Enter Mobile No."><br>
+             </div>
+             <div class="col-lg-6">
+                <label for="email" class="t-colour">E-Mail </label>
+                <input id="email" name="email" class="form-control" placeholder="Enter E-Mail"><br>
+             </div>
+           </div>
+           <div class="row">
+             <div class="col-lg-6">
+                <label for="amount" class="t-colour">Amount</label>
+                <input id="amount" name="amount" class="form-control" placeholder="Enter Amount"><br>
+             </div>
+             <div class="col-lg-6">
+                <label for="pan" class="t-colour">Pan No.</label>
+                <input id="pan" name="pan" class="form-control" placeholder="Pan No."><br>
+             </div>
+           </div>
+           <div class="row">
+             <div class="col-lg-6">
+                <label for="d1" class="t-colour">To Date</label>
+                <input type="date" id="d1" name="d1" class="form-control" placeholder="Enter To Date"><br>
+             </div>
+             <div class="col-lg-6">
+                <label for="d2" class="t-colour">From Date</label>
+                <input type="date" id="d2" name="d2" class="form-control" placeholder="From Date"><br>
+             </div>
+           </div>
+           <div class="row">
+             <div class="col-lg-6">
+                <label for="gst" class="t-colour">Delivery Address.</label>
+                <input id="gst" name="gst" class="form-control" placeholder="Enter delivery address No."><br>
+             </div>
+             <div class="col-lg-6">
+                <label for="pin" class="t-colour">Pin Code</label>
+                <input id="pin" name="pin" class="form-control" placeholder="Pin Code"><br>
+             </div>
+           </div>
+           <div class="row">
+             <div class="col-lg-6">
+              <label class="t-colour">Gender</label>
+           <select name="gender" id="gender" class="form-select" aria-label="Default select example"><br>
+             <option value="">select Gender</option>
+             <option>Male</option>
+             <option>Female</option>
+             <option>Other</option>
+           </select>
+            </div>
+               </div>
+             <br>
+             <input type="submit" name="submit" value="Submit" class="btn btn-success btn-block">
+           </div>
+         </div>
+         </form>
+       </div>
+      <div class="col-md-3"></div>
+        
+      </div>
+    </div>
+  </div>
+
+</body>
+<script type="text/javascript">
+  $(document).ready(function(){
+
+  jQuery.validator.addMethod("namePattrn", function(value, element) { 
+  return this.optional( element ) || /^[a-zA-Z]+$/.test( value ); 
+        }, "Please enter valid Name!");
+
+  jQuery.validator.addMethod("mobileNo", function(value, element) { 
+  return this.optional( element ) || /^[6-9]\d{9}$/gi.test( value ); 
+        }, "Please enter valid Mobile No.!");
+
+  jQuery.validator.addMethod("panNo", function(value, element) { 
+  return this.optional( element ) || /^[A-Za-z]{5}[0-9]{4}[A-Za-z]{1}$/.test( value ); 
+        }, "Please enter valid Pan No.!");
+
+    jQuery.validator.addMethod("gstNo", function(value, element) { 
+  return this.optional( element ) || /^([0][1-9]|[1-2][0-9]|[3][0-7])([A-Z]{5})([0-9]{4})([A-Z]{1}[1-9A-Z]{1})([Z]{1})([0-9A-Z]{1})+$/.test( value ); 
+        }, "Please enter valid GST No.!");
+
+    jQuery.validator.addMethod("amount", function(value, element) { 
+  return this.optional( element ) ||  /^\d+(?:\.\d{1,2})$/.test( value ); 
+        }, "Please enter amount in 0000.00 this format!");
+
+
+  jQuery.validator.addMethod("greaterThan", 
+function(value, element, params) {
+
+    if (!/Invalid|NaN/.test(new Date(value))) {
+        return new Date(value) > new Date($(params).val());
+    }
+  return isNaN(value) && isNaN($(params).val()) 
+        || (Number(value) > Number($(params).val())); 
+  },'Must be greater than To Date.');
+
+   
+  $("#jQuery_form").validate({
+    rules: {
+      fname : {
+        required: true,
+        minlength: 3,
+        maxlength: 15,
+        namePattrn: true,
+         normalizer: function( value ) {
+        return $.trim( value );
+      }
+
+      },
+      lname: {
+        required: true,        
+        minlength: 3,
+        maxlength: 15,
+        namePattrn:true,
+         normalizer: function( value ) {
+        return $.trim( value );
+      }
+      },
+      email: {
+        required: true,
+        email: true
+      },
+      mobile: {
+        required: true,
+        number: true,
+        minlength:10,
+        maxlength:10,
+        mobileNo:true
+        
+      },
+    
+     amount: {
+        required: true,
+        amount: true
+      },
+       pan: {
+        required: true,
+        panNo: true
+      },
+       gst: {
+        required: true,
+        gstNo: true
+      },
+       d1: {
+        required: true,
+      },
+       d2: {
+        required: true,
+        greaterThan: "#d1" 
+      },
+       pin: {
+        required: true,
+        number:true,
+        // pin: true
+        minlength: 6,
+        maxlength: 6,
+      },
+       gender: {
+        required: {
+        depends: function(element) {
+            return $("#gender").val() == "";
+        }
+      },
+      },
+       qualification: {
+        required: {
+        depends: function(element) {
+            return $("#qualification").val() == "";
+        }
+      },
+    }
+      },
+    messages : {
+      fname: {
+        minlength: "Name should be at least 3 characters",
+        maxlength: "Name should not be more than 15 characters"
+      },
+      lname: {
+      minlength: "Name should be at least 3 characters",
+      maxlength: "Name should not be more than 15 characters"
+      },
+      email: {
+        email: "The email should be in the format: abc@domain.tld"
+      },
+      gender :{
+        required: "please select gender!"
+      },
+      qualification :{
+        required: "please select qualification!"
+      }
+    }
+  });
+  });
+  
+</script>
+</html>

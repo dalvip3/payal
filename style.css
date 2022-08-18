@@ -1,0 +1,228 @@
+<html>
+<head>
+<style>
+*{
+	padding:0px;
+	margin:0px;
+	box-sizing: border-box;
+	font-family:sans-serif;
+
+}
+
+section {
+	width:100%;
+	height:100vh;
+	
+}
+section header{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	box-shadow:0 0 20px rgba(0,0,0,0.3);
+}
+section header .logo{
+	font-size:30px;
+	color:black;
+	text-decoration:none;
+	font-weight:bold;
+	margin:15px 0;
+}
+section header .logo span{
+		color:red;
+}
+section header ul{
+	list-style:none;
+}
+section header ul li{
+	display:inline-block;
+	margin:5px 5px;
+	padding:5px 20px;
+}
+section header ul li a{
+	color:black;
+	text-decoration:none;
+}
+section header ul li a:hover{
+	color:red;
+}
+section header p{
+	cursor:pointer;
+	padding:10px 25px;
+	border:1px solid orange;
+	border-radius:30px;
+	transition:0.3s;
+	
+}
+section header p:hover{
+	color:white;
+	background:pink;
+}
+.circle{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:rgba(179,105,130);
+	clip-path:circle(320px at left -210px);
+	z-index:-1;
+}
+section  .texts h1{
+	position:absolute;
+	top:35%;
+	left:4%;
+	font-size:50px;
+	color:black;
+	font-style:italic;
+	font-weight:bold;
+	font-variant:small-caps;
+}
+section   .texts  h1  span{
+	color: red;
+}
+section  .texts   p{
+	width:650px;
+	position:absolute;
+	top:50%;
+	left:4%;
+	line-height:26px;
+	font-style:italic;
+	text-align:justify;
+	font-variant:small-caps;
+	font-weight:light;
+}
+section  .background_image img{
+	width:750px;
+	position:absolute;
+	top:25%;
+	left:47%;
+	margin-left: 25px;	
+}
+section .btn{
+	position:relative;
+	top:77%;
+	left:38px;
+	width:340px;
+	display:flex;
+	align-items:center;
+	justify-content: space-around;
+}
+section .btn.read{
+	background:red;
+	color:white;
+	cursor:pointer;
+	transition:0.3s;
+}
+section  .btn p{
+	padding:10px 25px;
+	background: none;
+	border: 2px solid black;
+	cursor: pointer;
+	border-radius:30px;
+}
+section .btn p:hover{
+	color:white;
+	background:orange;
+}
+.about{
+	width:100%;
+	height:240vh;
+	padding:50px;
+}
+.about .box{
+	width:100%;
+	padding:60px 0;
+	display: flex;
+	align-items:center;
+	justify-content:center;
+}
+.about .box .card{
+	width:170px;
+	height: auto;
+	padding: 5px 10px;
+	margin: 0 15px;
+	background: gainsboro;
+	border: 1px solid gainsboro;
+	cursor: pointer;
+	z-index: 1;
+	transition:0.3s;
+}
+.about  .box  .card:hover{
+	box-shadow:3px 5px 20px rgba(0,0,0,0.3);
+	border-radius: 5px;
+	transform:scale(1.1);
+}
+.about .box .crad.img{
+	width:50px;
+	height:50px;
+}
+.about hr{
+	height:2px;
+	background:grey;
+	border-radius:5px;
+	margin:35px 110px;
+}
+.about .Clothes h1{
+	font-size:30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin:35px 0;
+	font-style:italic;
+}
+.about .Clothes p{
+	text-align:center;
+	margin:35px 0;
+	color: grey;
+	font-size:20px;
+	font-style:italic;
+}
+.about .Clothes_ box{
+	width:100%;
+	display:grid;
+	grid-template-columns: col-sm-1 col-md-2 col-lg-3 col-xl-4;
+	grid-gap:25px;
+}
+.about .Clothes_ box .Clothes_card{
+	background:red;
+	width:350px;
+	padding:25px 25px;
+	text-align:center;
+	border-radius:10px;
+	transition:0.3s;
+}
+.about .Clothes_ box .Clothes_card:hover{
+	box-shadow:5px 5px 5px rgba(0,0,0,0.6);
+}
+.about .Clothes .Clothes_box  img{
+	width:250PX;
+	cursor:pointer;
+	transition:0.3s;
+}
+.about .Clothes_ box .Clothes_box  img:hover{
+	transform: scale(1.1);
+	
+}
+.about .Clothes_ box .Clothes_card  h1{
+	font-size:35px;
+	color:gainsboro;
+	margin:15px 0;	
+}
+.about .Clothes_ box .Clothes_card  p{
+	font-size:17px 0;
+	color:white;
+	margin:25px;	
+}
+	
+</style>
+</head>
+</html>	
+
+	
+	
+	
+
+	
+
+
+	
